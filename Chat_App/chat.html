@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My Chat App</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/affeab23de.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 5px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #chat-container {
+            width: 500px;
+            margin-top: 20px;
+        }
+        #message-container{
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 600px;
+            overflow-y: scroll;
+            background-color:grey;
+        }
+        #send-container {
+            display: flex;
+            width: 500px;
+
+            margin-top: 10px;
+        }
+        #message-container div:nth-child(2n) {
+        background-color: #cbaaaa;
+        margin-left:5px;
+        margin-bottom: 5px;
+        padding:7px;
+        font-size: 20px;
+        border-radius: 10px;
+}
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            margin:5px;
+            background-color: rgb(203, 199, 199);
+        }
+        button {
+            padding: 10px;
+            background-color: greenyellow;
+            color:black; 
+            border-radius: 10px;
+            font-style: bold;  
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="message-container"></div>
+        <form id="send-container">
+            <input type="text" id="message-input" autocomplete="off" placeholder="Type your message here...">
+            <button type="submit" id="send-button">Send <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        </div>
+    </div>
+
+   
+</body>
+</html>
